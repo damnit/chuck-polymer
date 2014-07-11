@@ -1,0 +1,21 @@
+{
+  "name": "chuck-polymer",
+  "version": "0.0.1",
+  "authors": [
+    "Otto Hockel <hockel.otto@googlemail.com>"
+  ],
+  "description": "yet the first chuck norris facts html element",
+  "main": "index.html",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "polymer": "Polymer/polymer#~0.3.3"
+  }
+}

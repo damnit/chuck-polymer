@@ -1,4 +1,8 @@
-chuck-polymer
-=============
+# chuck-polymer
+randomized chuck norris facts as a polymer element
 
-polymerized chuck norris facts
+    <chuck-norris></chuck-norris>
+
+# TODOS
+- make list of facts customizable
+- make css customizeable
