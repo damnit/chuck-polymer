@@ -1,0 +1,7 @@
+{
+  "name": "chuck-polymer#gh-pages",
+  "private": true,
+  "dependencies": {
+    "chuck-polymer": "damnit/chuck-polymer#master"
+  }
+}
