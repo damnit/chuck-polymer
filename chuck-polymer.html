@@ -1,12 +1,32 @@
 <link rel="import" href="bower_components/polymer/polymer.html">
 
+<!--
+Chuck Norris powers polymerized
+
+#### Example
+
+    <chuck-norris />
+
+
+@element chuck-norris
+@blurb Chuck Norris powers polymerized
+@status beta
+@homepage https://github.com/damnit/chuck-polymer
+-->
 <polymer-element name="chuck-norris" noscript>
   <template>
   {{chuck}}
   </template>
   <script>
     Polymer('chuck-norris', {
+      author: "Otto Hockel",
+      /**
+      * Set up a facts list and set a random chuck fact
+      *
+      * @callback ready
+      */
       ready: function(){
+        // Set up the chuck facts list and take a random entry
         var facts = [
             "Chuck Norris won a game of chess with checker pieces",
             "When Alexander Bell invented the telephone he had 3 missed calls from Chuck Norris",

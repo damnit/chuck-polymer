@@ -6,3 +6,4 @@ randomized chuck norris facts as a polymer element
 # TODOS
 - make list of facts customizable
 - make css customizeable
+- provide name attribute to change the name of chuck :)
