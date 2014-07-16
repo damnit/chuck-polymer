@@ -13,19 +13,20 @@ Chuck Norris powers polymerized
 @status beta
 @homepage https://github.com/damnit/chuck-polymer
 -->
-<polymer-element name="chuck-norris" noscript>
+<polymer-element name="chuck-norris" attributes="facts,notchuck" noscript>
   <template>
   {{chuck}}
   </template>
   <script>
     Polymer('chuck-norris', {
       author: "Otto Hockel",
+      dechuckify: function(myname){ return myname; },
       /**
       * Set up a facts list and set a random chuck fact
       *
       * @callback ready
       */
-      ready: function(){
+      ready: function(facts){
         // Set up the chuck facts list and take a random entry
         var facts = [
             "Chuck Norris won a game of chess with checker pieces",
@@ -79,9 +80,17 @@ Chuck Norris powers polymerized
             "May 6th, 1945: A then five-year old Chuck Norris swam the Atlantic Ocean. The next day, the Nazis surrendered...",
             "Chuck Norris can give Tylenol a headache"
         ]
+        if(this.facts || []){
+          // do ajax here
+        };
         var random = Math.round(Math.random()*facts.length);
         if(random === facts.length) random = random-1;
-        this.chuck = facts[random];
+        if(this.notchuck || []){
+          this.chuck = facts[random].replace(/Chuck Norris/g, this.notchuck);
+        }
+        else{
+          this.chuck = facts[random]
+        };
       }
         });
   </script>
