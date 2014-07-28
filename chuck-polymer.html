@@ -20,7 +20,6 @@ Chuck Norris powers polymerized
   <script>
     Polymer('chuck-norris', {
       author: "Otto Hockel",
-      dechuckify: function(myname){ return myname; },
       /**
       * Set up a facts list and set a random chuck fact
       *
@@ -85,12 +84,15 @@ Chuck Norris powers polymerized
         };
         var random = Math.round(Math.random()*facts.length);
         if(random === facts.length) random = random-1;
-        if(this.notchuck || []){
-          this.chuck = facts[random].replace(/Chuck Norris/g, this.notchuck);
-        }
-        else{
-          this.chuck = facts[random]
-        };
+        /**
+        * provide your own name - if you are brave enough
+        *
+        * @property notchuck
+        * @type string
+        * @default []
+        */
+        if(this.notchuck || []) this.chuck = facts[random].replace(/Chuck Norris/g, this.notchuck);
+        else this.chuck = facts[random];
       }
         });
   </script>
