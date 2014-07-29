@@ -13,7 +13,7 @@ Chuck Norris powers polymerized
 @status beta
 @homepage https://github.com/damnit/chuck-polymer
 -->
-<polymer-element name="chuck-norris" attributes="facts,notchuck" noscript>
+<polymer-element name="chuck-norris" attributes="notchuck" noscript>
   <template>
   {{chuck}}
   </template>
@@ -79,16 +79,13 @@ Chuck Norris powers polymerized
             "May 6th, 1945: A then five-year old Chuck Norris swam the Atlantic Ocean. The next day, the Nazis surrendered...",
             "Chuck Norris can give Tylenol a headache"
         ]
-        if(this.facts || []){
-          // do ajax here
-        };
         var random = Math.round(Math.random()*facts.length);
         if(random === facts.length) random = random-1;
         /**
         * provide your own name - if you are brave enough
         *
         * @property notchuck
-        * @type string
+        * @type String
         * @default []
         */
         if(this.notchuck || []) this.chuck = facts[random].replace(/Chuck Norris/g, this.notchuck);
