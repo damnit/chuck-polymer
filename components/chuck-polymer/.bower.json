@@ -1,0 +1,31 @@
+{
+  "name": "chuck-polymer",
+  "authors": [
+    "Otto Hockel <hockel.otto@googlemail.com>"
+  ],
+  "description": "yet the first chuck norris facts html element",
+  "main": "index.html",
+  "license": "MIT",
+  "private": false,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "polymer": "Polymer/polymer#~0.3.3"
+  },
+  "homepage": "https://github.com/damnit/chuck-polymer",
+  "_release": "1ccb88df63",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "1ccb88df6332d2785b901c40a87e12d6f55bbef9"
+  },
+  "_source": "git://github.com/damnit/chuck-polymer.git",
+  "_target": "master",
+  "_originalSource": "damnit/chuck-polymer",
+  "_direct": true
+}

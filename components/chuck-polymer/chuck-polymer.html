@@ -1,4 +1,4 @@
-<link rel="import" href="components/polymer/polymer.html">
+<link rel="import" href="bower_components/polymer/polymer.html">
 
 <!--
 Chuck Norris powers polymerized
@@ -13,7 +13,7 @@ Chuck Norris powers polymerized
 @status beta
 @homepage https://github.com/damnit/chuck-polymer
 -->
-<polymer-element name="chuck-norris" attributes="notchuck" noscript>
+<polymer-element name="chuck-norris" noscript>
   <template>
   {{chuck}}
   </template>
@@ -81,15 +81,7 @@ Chuck Norris powers polymerized
         ]
         var random = Math.round(Math.random()*facts.length);
         if(random === facts.length) random = random-1;
-        /**
-        * provide your own name - if you are brave enough
-        *
-        * @property notchuck
-        * @type String
-        * @default []
-        */
-        if(this.notchuck || []) this.chuck = facts[random].replace(/Chuck Norris/g, this.notchuck);
-        else this.chuck = facts[random];
+        this.chuck = facts[random];
       }
         });
   </script>
